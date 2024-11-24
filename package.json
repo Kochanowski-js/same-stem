@@ -1,0 +1,29 @@
+{
+  "name": "same-stem",
+  "version": "1.0.0",
+  "description": "Helper function that checks whether two words have the same stem",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kochanowski-js/same-stem.git"
+  },
+  "keywords": [
+    "polish",
+    "kochanowski",
+    "stemmer"
+  ],
+  "author": "CheryX",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kochanowski-js/same-stem/issues"
+  },
+  "homepage": "https://github.com/Kochanowski-js/same-stem#readme",
+  "devDependencies": {
+    "@types/node": "^22.9.3",
+    "typescript": "^5.7.2"
+  }
+}
