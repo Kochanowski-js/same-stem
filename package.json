@@ -1,6 +1,6 @@
 {
   "name": "same-stem",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Helper function that checks whether two words have the same stem",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,10 @@
   "devDependencies": {
     "@types/node": "^22.9.3",
     "typescript": "^5.7.2"
-  }
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "sgjp-20241117-lemmatized.tab"
+  ]
 }
