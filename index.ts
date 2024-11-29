@@ -1,6 +1,16 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+let cachedFileContent: string | null = null;
+
+function readFileContent(): string {
+  if (cachedFileContent === null) {
+    const filePath = path.join(__dirname, "../data/sgjp-20241117-lemmatized.tab");
+    cachedFileContent = fs.readFileSync(filePath, 'utf-8');
+  }
+  return cachedFileContent;
+}
+
 export default function sameStem(word1: string, word2: string): boolean {
   
   if (word1 === word2) {
@@ -27,8 +37,7 @@ export default function sameStem(word1: string, word2: string): boolean {
  * @returns Base form of the word
  */
 function getStem(word: string): string | undefined {
-  const filePath = path.join(__dirname, "../data/sgjp-20241117-lemmatized.tab");
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const fileContent = readFileContent();
   const lines = fileContent.split('\n');
 
   for (const line of lines) {
@@ -38,7 +47,7 @@ function getStem(word: string): string | undefined {
     }
   }
 
-  return undefined
+  return undefined;
 }
 
 function levenshtein(a: string, b: string): number {
