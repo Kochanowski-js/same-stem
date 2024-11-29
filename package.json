@@ -1,6 +1,6 @@
 {
   "name": "same-stem",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helper function that checks whether two words have the same stem",
   "main": "index.js",
   "scripts": {
